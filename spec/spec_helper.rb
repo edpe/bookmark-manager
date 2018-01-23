@@ -1,7 +1,6 @@
 require 'dm-migrations'
 require 'data_mapper'
 require 'dm-postgres-adapter'
-
 require 'capybara/rspec'
 require './app/models/links.rb'
 require './app/app'
