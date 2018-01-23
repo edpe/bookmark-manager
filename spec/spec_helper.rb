@@ -1,7 +1,8 @@
+require 'database_cleaner'
+require 'capybara/rspec'
 require 'dm-migrations'
 require 'data_mapper'
 require 'dm-postgres-adapter'
-require 'capybara/rspec'
 require './app/models/links.rb'
 require './app/app'
 
@@ -23,6 +24,10 @@ Capybara.app = BookmarkManager
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
