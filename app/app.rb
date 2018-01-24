@@ -8,9 +8,6 @@ require_relative 'models/tags'
 
 class BookmarkManager < Sinatra::Base
 
-  DatabaseCleaner.start
-  DatabaseCleaner.clean
-
   get '/links' do
    @links = Link.all
    erb(:'links/index')
