@@ -7,7 +7,7 @@ feature 'Viewing links on the homepage' do
     end
   end
 
-  scenario 'Links can be viewed by tag' do
+  scenario 'links can be viewed by tag' do
     Link.create(url: "http://www.html5drummachine.com/", title: "HTML5 Drum Machine", tags: [Tag.first_or_create(name: 'music')])
     Link.create(url: "http://www.shooter-bubble.com/", title: "Bubble Shooter", tags: [Tag.first_or_create(name: 'bubbles')])
     visit('/tags/bubbles')
