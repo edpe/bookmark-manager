@@ -5,7 +5,8 @@ require 'capybara/rspec'
 require 'dm-migrations'
 require 'data_mapper'
 require 'dm-postgres-adapter'
-require './app/models/links.rb'
+require './app/models/link'
+require './app/models/tags'
 require './app/app'
 
 Capybara.app = BookmarkManager
