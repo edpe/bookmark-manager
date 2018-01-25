@@ -8,6 +8,7 @@ require 'dm-postgres-adapter'
 require './app/models/link'
 require './app/models/tags'
 require './app/app'
+require 'features/web_helpers'
 
 Capybara.app = BookmarkManager
 
